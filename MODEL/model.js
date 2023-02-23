@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 const raceSchema = new mongoose.Schema({
-  name: {
+  Name: {
     type: String,
     required: true,
   },
@@ -15,11 +15,11 @@ const raceSchema = new mongoose.Schema({
     required: true
   },
   wins: {
-    type: Number,
-    required: true
+    type: String,
+    required : Number,
   }
 });
 
-const employeeModel = mongoose.model('race', employeeSchema);
 
-module.exports = employeeModel;
+
+module.exports = mongoose.model('race', raceSchema);
